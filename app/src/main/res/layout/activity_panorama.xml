@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:fitsSystemWindows="true">
+    <com.otaliastudios.cameraview.CameraView
+        android:id="@+id/camera_view"
+        android:keepScreenOn="true"
+        android:layout_marginTop="80dp"
+        android:layout_centerHorizontal="true"
+        android:layout_width="270dp"
+        android:layout_height="360dp"/>
+    <com.hxx.panoramademo.phototaker.view.Camera3dView
+        android:id="@+id/camera3d_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true" />
+    <com.hxx.panoramademo.phototaker.view.MyCenterView
+        android:id="@+id/my"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/camera_view"
+        android:layout_alignBottom="@+id/camera_view"
+        android:layout_alignLeft="@+id/camera_view"
+        android:layout_alignRight="@+id/camera_view"/>
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/camera_view"
+        android:layout_marginTop="10dp"
+        android:layout_centerHorizontal="true"
+        android:src="@mipmap/camera_rotate_icon"/>
+    <TextView
+        android:id="@+id/tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/camera_view"
+        android:layout_marginTop="45dp"
+        android:textColor="#A19DA1"
+        android:textSize="13sp"
+        android:gravity="center_horizontal"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:text="请将手机竖直于面前，将黄点移至圈内自动拍摄"/>
+
+    <ImageView
+        android:id="@+id/finish_iv"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/tv"
+        android:layout_marginTop="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="finish"
+        android:src="@mipmap/panaroma_finish_nor"/>
+</RelativeLayout>
